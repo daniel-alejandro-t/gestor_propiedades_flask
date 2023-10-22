@@ -1,0 +1,39 @@
+name: app_seguridad
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - _libgcc_mutex=0.1
+  - _openmp_mutex=4.5
+  - blinker=1.6.3
+  - bzip2=1.0.8
+  - ca-certificates=2023.7.22
+  - click=8.1.7
+  - flask=3.0.0
+  - importlib-metadata=6.8.0
+  - itsdangerous=2.1.2
+  - jinja2=3.1.2
+  - ld_impl_linux-64=2.40
+  - libexpat=2.5.0
+  - libffi=3.4.2
+  - libgcc-ng=13.2.0
+  - libgomp=13.2.0
+  - libnsl=2.0.1
+  - libsqlite=3.43.2
+  - libuuid=2.38.1
+  - libzlib=1.2.13
+  - markupsafe=2.1.3
+  - ncurses=6.4
+  - openssl=3.1.3
+  - pip=23.3.1
+  - python=3.12.0
+  - python_abi=3.12
+  - readline=8.2
+  - setuptools=68.2.2
+  - tk=8.6.13
+  - tzdata=2023c
+  - werkzeug=3.0.0
+  - wheel=0.41.2
+  - xz=5.2.6
+  - zipp=3.17.0
+prefix: /home/daniel/.conda/envs/app_seguridad
