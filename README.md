@@ -12,6 +12,7 @@ Para configurar y ejecutar la aplicación, sigue estos pasos rápidos:
    ```
 
 2. **Activar el entorno virtual**:
+   
    - Linux/Mac:
      ```bash
      source nombre_entorno/bin/activate
@@ -20,7 +21,7 @@ Para configurar y ejecutar la aplicación, sigue estos pasos rápidos:
      ```bash
      .\nombre_entorno\Scripts\activate
      ```
-
+   
 3. **Instalar los requerimientos**:
    Usando  `environment.yml` ubicado en la raíz de la app
    
@@ -187,3 +188,56 @@ Gestor_de_propiedades/
 └── environment.yml         # Lista de dependencias del proyecto
 ```
 
+### Rutas
+
+```mermaid
+graph TD
+    A[Inicio]
+    -->|/crear-usuario| B[Crear Usuario]
+    A -->|/crear-rol| C[Crear Rol]
+    A -->|/anuncios| D[Listar Anuncios]
+    D -->|/anuncios/crear| E[Crear Anuncio]
+    D -->|/anuncios/editar/:id| F[Editar Anuncio]
+    D -->|/anuncios/eliminar/:id| G[Eliminar Anuncio]
+    A -->|/pagos| H[Listar Pagos]
+```
+
+#### Usuarios
+
+- Crear Usuario:
+  - **Ruta**: `/crear-usuario`
+  - **Método**: GET, POST
+  - **Descripción**: Permite crear un nuevo usuario.
+
+#### Roles
+
+- Crear Rol:
+  - **Ruta**: `/crear-rol`
+  - **Método**: GET, POST
+  - **Descripción**: Permite crear un nuevo rol.
+
+#### Anuncios
+
+- **Listar Anuncios**:
+  - **Ruta**: `/anuncios`
+  - **Método**: GET
+  - **Descripción**: Muestra la lista de anuncios.
+- **Crear Anuncio**:
+  - **Ruta**: `/anuncios/crear`
+  - **Método**: GET, POST
+  - **Descripción**: Permite crear un nuevo anuncio.
+- **Editar Anuncio**:
+  - **Ruta**: `/anuncios/editar/<int:id>`
+  - **Método**: GET, POST
+  - **Descripción**: Permite editar un anuncio existente según el ID proporcionado.
+- **Eliminar Anuncio**:
+  - **Ruta**: `/anuncios/eliminar/<int:id>`
+  - **Método**: POST
+  - **Descripción**: Permite eliminar un anuncio existente según el ID proporcionado.
+
+#### Pagos
+
+- Listar Pagos:
+  - **Ruta**: `/pagos`
+  - **Método**: GET
+  - **Descripción**: Muestra la lista de pagos.
