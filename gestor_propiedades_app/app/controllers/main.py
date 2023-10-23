@@ -3,6 +3,14 @@ from flask import Blueprint, render_template, request, redirect, url_for
 # Definir un blueprint para el controlador principal
 main_blueprint = Blueprint('main', __name__)
 
+# Ruta para el login
+@main_blueprint.route('/login', methods=['GET', 'POST'])
+def login():
+    if request.method == 'POST':
+        # TODO Lógica para validar el login
+        return redirect(url_for('main.listar_anuncios'))
+    return render_template('login.html')
+
 # Ruta para la creación de usuarios
 @main_blueprint.route('/crear-usuario', methods=['GET', 'POST'])
 def crear_usuario():

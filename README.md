@@ -57,7 +57,7 @@ Ejecutamos el DDL
 ### Diagrama ER
 
 
-    
+​    
 
 ```mermaid
 erDiagram
@@ -193,28 +193,37 @@ Gestor_de_propiedades/
 ```mermaid
 graph TD
     A[Inicio]
-    -->|/crear-usuario| B[Crear Usuario]
-    A -->|/crear-rol| C[Crear Rol]
-    A -->|/anuncios| D[Listar Anuncios]
+    -->|/login| I[Iniciar Sesión]
+    I -->|/crear-usuario| B[Crear Usuario]
+    I -->|/crear-rol| C[Crear Rol]
+    I -->|/anuncios| D[Listar Anuncios]
     D -->|/anuncios/crear| E[Crear Anuncio]
     D -->|/anuncios/editar/:id| F[Editar Anuncio]
     D -->|/anuncios/eliminar/:id| G[Eliminar Anuncio]
-    A -->|/pagos| H[Listar Pagos]
+    I -->|/pagos| H[Listar Pagos]
 ```
 
 #### Usuarios
 
-- Crear Usuario:
-  - **Ruta**: `/crear-usuario`
-  - **Método**: GET, POST
-  - **Descripción**: Permite crear un nuevo usuario.
+**Iniciar Sesión**:
+
+- **Ruta**: `/login`
+- **Método**: GET, POST
+- **Descripción**: Permite a los usuarios iniciar sesión en la aplicación.
+
+**Crear Usuario:**
+
+- **Ruta**: `/crear-usuario`
+- **Método**: GET, POST
+- **Descripción**: Permite crear un nuevo usuario.
 
 #### Roles
 
-- Crear Rol:
-  - **Ruta**: `/crear-rol`
-  - **Método**: GET, POST
-  - **Descripción**: Permite crear un nuevo rol.
+**Crear Rol:**
+
+- **Ruta**: `/crear-rol`
+- **Método**: GET, POST
+- **Descripción**: Permite crear un nuevo rol.
 
 #### Anuncios
 
